@@ -1,6 +1,6 @@
 // vue.config.js
 module.exports = {
-  publicPath: process.env.NODE_DEV === 'production' ? '/edu-boss-fed' : '/',
+  publicPath: '/edu-boss-fed',
   css: {
     loaderOptions: {
       scss: {
