@@ -11,11 +11,17 @@ module.exports = {
     proxy: {
       '/api/boss': {
         target: 'http://eduboss.lagou.com',
-        changeOrigin: true // 把请求头中的 host 配置为 target
+        changeOrigin: true, // 把请求头中的 host 配置为 target
+        pathRewrite:{
+          '^/api/':''
+        }
       },
       '/api/front': {
         target: 'http://edufront.lagou.com',
-        changeOrigin: true
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api/': ''
+        }
       }
     }
   }
