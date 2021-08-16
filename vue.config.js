@@ -1,6 +1,5 @@
 // vue.config.js
 module.exports = {
-  publicPath: '/edu-boss-fed',
   css: {
     loaderOptions: {
       scss: {
