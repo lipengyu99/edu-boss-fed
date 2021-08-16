@@ -4,7 +4,9 @@ import qs from 'qs'
 import { Message } from 'element-ui'
 import router from '@/router'
 const request = axios.create({
-  baseURL: 'http://eduboss.lagou.com'
+  // baseURL: 'http://eduboss.lagou.com'
+  baseURL:'/api'
+
 })
 
 function refreshToken () {
