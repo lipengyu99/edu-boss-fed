@@ -2,7 +2,7 @@
 const { createProxyMiddleware } = require( 'http-proxy-middleware' )
 
 module.exports = ( req, res ) => {
-    lettarget = ''
+    let target = ''
 
     // 处理代理目标地址
     if ( req.url.includes( '/api/front' ) ) {
