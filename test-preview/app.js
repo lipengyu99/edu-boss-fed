@@ -4,13 +4,13 @@ const app = express()
 
 app.use( express.static( './dist' ) )
 app.use( '/boss', createProxyMiddleware( {
-    target: 'http://eduboss.lagou.com',
+    target: 'http://eduboss.lagou.com/',
     changeOrigin: true,
    
 } ) )
 
 app.use( '/front', createProxyMiddleware( {
-    target: 'http://edufront.lagou.com',
+    target: 'http://edufront.lagou.com/',
     changeOrigin: true,
 } ) )
 
