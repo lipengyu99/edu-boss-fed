@@ -5,9 +5,9 @@ module.exports = ( req, res ) => {
     let target = ''
 
     // 处理代理目标地址
-    if ( req.url.includes( '/api/front' ) ) {
+    if ( req.url.includes( '/front' ) ) {
         target = 'http://edufront.lagou.com/'
-    } else if ( req.url.startsWith( '/api/boss' ) ) {
+    } else if ( req.url.startsWith( '/boss' ) ) {
         target = 'http://eduboss.lagou.com/'
     }
 
@@ -15,11 +15,11 @@ module.exports = ( req, res ) => {
     createProxyMiddleware( {
         target,
         changeOrigin: true,
-        pathRewrite: {
-            // 通过路径重写，去除请求路径中的 /api
-            //   例如 /api/boss/xxx 将被转发到 http://eduboss.lagou.com/boss/xxx
-            //   例如 /api/front/xxx 将被转发到 http://eduboss.lagou.com/front/xxx
-            '^/api/': ''
-        }
+        // pathRewrite: {
+        //     // 通过路径重写，去除请求路径中的 /api
+        //     //   例如 /api/boss/xxx 将被转发到 http://eduboss.lagou.com/boss/xxx
+        //     //   例如 /api/front/xxx 将被转发到 http://eduboss.lagou.com/front/xxx
+        //     '^/api/': ''
+        // }
     } )( req, res )
 }
