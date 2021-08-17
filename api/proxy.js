@@ -7,7 +7,7 @@ module.exports = ( req, res ) => {
     // 处理代理目标地址
     if ( req.url.includes( '/api/front' ) ) {
         target = 'http://edufront.lagou.com/'
-    } elseif( req.url.startsWith( '/api/boss' ) ) {
+    } else if ( req.url.startsWith( '/api/boss' ) ) {
         target = 'http://eduboss.lagou.com/'
     }
 
